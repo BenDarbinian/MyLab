@@ -15,9 +15,9 @@ class SerivceResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'название' => $this->name,
-            'время в часах' => $this->time,
-            'цена' => $this->price,
+            'name' => $this->name,
+            'time' => $this->time,
+            'price' => $this->price,
         ];
     }
 }

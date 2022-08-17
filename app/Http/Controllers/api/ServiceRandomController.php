@@ -9,7 +9,11 @@ use App\Models\Service;
 
 class ServiceRandomController extends Controller
 {
-    public function  index() {
-        return SerivceResource::collection(Service::inRandomOrder()->limit(5)->get());
+    public function  store(Request $request) {
+        $request->validate([
+            'number' => 'numeric|integer|min:1'
+        ]);
+        $n = $request -> number;
+        return SerivceResource::collection(Service::inRandomOrder()->limit($n)->get());
     }
 }

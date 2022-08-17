@@ -21,6 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::resource('services', ServiceController::class);
 Route::resource('servicesrand', ServiceRandomController::class);
 Route::resource('servicescount', ServiceCountController::class);

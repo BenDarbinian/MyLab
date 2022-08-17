@@ -1,46 +1,35 @@
 # Simple MyLab API
 
-- #### GET /api/services
-все лабы поочереди
-####response:
-			0: 	
-				название: "первая лаба"
-				время в часах: "50"
-				цена: "450"
-			1: 	
-				название: "вторая лаба"
-				время в часах: "60"
-				цена: "500"
-			2: 	
-				название: "третья лаба"
-				время в часах: "40"
-				цена: "700"
+- #### POST /api/servicesrand
 
-- #### GET /api/servicesrand
-случайные 5 лаб
+    - "number" must be numeric and >= 1
+    - can work without variable "number" (will return all labs in random order)
+#### request body:
+    {
+        "number": 3
+    }
 
-####response:
-			0: 	
-				название: "случайная лаба"
-				время в часах: "50"
-				цена: "450"
-			1: 	
-				название: "случайная лаба"
-				время в часах: "60"
-				цена: "500"
-			2: 	
-				название: "случайная лаба"
-				время в часах: "40"
-				цена: "700"
-			3: 	
-				название: "случайная лаба"
-				время в часах: "40"
-				цена: "700"
-			4: 	
-				название: "случайная лаба"
-				время в часах: "40"
-				цена: "700"
+#### response:
+
+    "data": [
+        {
+            "name": "random lab",
+            "time": 60,
+            "price": 500
+        },
+        {
+            "name": "random lab",
+            "time": 70,
+            "price": 500
+        },
+        {
+            "name": "random lab",
+            "time": 50,
+            "price": 450
+        }
+    ]
                 
-- #### GET /api/servicescount
-количество всех лаб
+- #### POST /api/servicescount
+
+#### response:
 			7
