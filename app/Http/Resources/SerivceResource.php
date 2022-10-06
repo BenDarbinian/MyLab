@@ -16,6 +16,7 @@ class SerivceResource extends JsonResource
     {
         return [
             'name' => $this->name,
+            'type' => $this->type,
             'time' => $this->time,
             'price' => $this->price,
         ];
