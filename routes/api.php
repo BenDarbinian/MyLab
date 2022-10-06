@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\Api\ServiceController;
-use App\Http\Controllers\Api\ServiceCountController;
-use App\Http\Controllers\Api\ServiceRandomController;
+use App\Http\Controllers\api\ServiceController;
+use App\Http\Controllers\api\ServiceCountController;
+use App\Http\Controllers\api\ServiceRandomController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
