@@ -9,7 +9,7 @@ use App\Models\Service;
 
 class ServiceRandomController extends Controller
 {
-    public function  store(Request $request) {
+    public function  index(Request $request) {
         $request->validate([
             'number' => 'numeric|integer|min:1'
         ]);

@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\api\ServiceController;
 use App\Http\Controllers\api\ServiceCountController;
 use App\Http\Controllers\api\ServiceRandomController;
 use Illuminate\Http\Request;
@@ -21,5 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::resource('servicesrand', ServiceRandomController::class);
-Route::resource('servicescount', ServiceCountController::class);
+Route::get('servicesrand', [ServiceRandomController::class, 'index']);
+Route::get('servicescount',[ServiceCountController::class, 'index']);

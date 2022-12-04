@@ -9,7 +9,7 @@ use App\Models\Service;
 
 class ServiceCountController extends Controller
 {
-    public function  store() {
+    public function  index() {
         return Service::count();
     }
 }
